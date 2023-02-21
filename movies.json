@@ -1,0 +1,57 @@
+[{
+  "title": "The Shawshank Redemption",
+  "director": "Frank Darabont",
+  "imdb": 9.3,
+  "release": {
+    "$date": {
+      "$numberLong": "779144400000"
+    }
+  },
+  "counts": [
+    10,
+    20,
+    30
+  ]
+},{
+  "title": "Pulp Fiction",
+  "director": "Quentin Tarantino",
+  "imdb": 8.8,
+  "release": {
+    "$date": {
+      "$numberLong": "766962000000"
+    }
+  },
+  "counts": [
+    5,
+    10,
+    15
+  ]
+},{
+  "title": "Saving Private Ryan",
+  "director": "Steven Spielberg",
+  "imdb": 8.6,
+  "release": {
+    "$date": {
+      "$numberLong": "900979200000"
+    }
+  },
+  "counts": [
+    65,
+    45,
+    77
+  ]
+},{
+  "title": "Gladiator",
+  "director": "Ridley Scott",
+  "imdb": 8.4,
+  "release": {
+    "$date": {
+      "$numberLong": "954547200000"
+    }
+  },
+  "counts": [
+    122,
+    432,
+    1
+  ]
+}]
