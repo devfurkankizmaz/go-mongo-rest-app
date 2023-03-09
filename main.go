@@ -7,8 +7,10 @@ import (
 )
 
 func main() {
-	router := gin.Default()
 	configs.ConnectDB()
+	router := gin.Default()
+	router.Use(gin.Logger())
 	routes.MovieRoute(router)
+	routes.DirectorRoute(router)
 	router.Run("localhost:2121")
 }

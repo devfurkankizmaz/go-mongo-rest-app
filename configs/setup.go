@@ -16,8 +16,11 @@ func ConnectDB() *mongo.Client {
 		log.Fatal(err)
 	}
 
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
 	err = client.Connect(ctx)
+
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -33,6 +36,6 @@ func ConnectDB() *mongo.Client {
 var DB *mongo.Client = ConnectDB()
 
 func GetCollection(client *mongo.Client, collectionName string) *mongo.Collection {
-	collection := client.Database("goAPI").Collection(collectionName)
+	var collection *mongo.Collection = client.Database("goAPI").Collection(collectionName)
 	return collection
 }
